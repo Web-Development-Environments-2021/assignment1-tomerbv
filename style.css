@@ -65,7 +65,7 @@ p{
   .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 5% 5% ;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -82,7 +82,12 @@ p{
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  transition: transform .2s; /* Animation */
 }
+
+.column img:hover {
+	transform: scale(1.2);
+  }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -106,19 +111,47 @@ img {
 	object-fit: contain;
 }	
 
+.qa {
+	border-collapse: collapse;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 
-input[type=text], select, textarea {
-	width: 100%; /* Full width */
-	padding: 12px; /* Some padding */ 
-	border: 1px solid #ccc; /* Gray border */
-	border-radius: 4px; /* Rounded borders */
-	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	margin-top: 6px; /* Add a top margin */
-	margin-bottom: 16px; /* Bottom margin */
-	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
   
-  /* Style the submit button with a specific background color etc */
+  .qa td, .qa th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  .qa tr:nth-child(even){background-color: #ececec;}
+  .qa tr:nth-child(odd){background-color: #cacaca;}
+  
+  .qa tr:hover {background-color: #bababa;}
+  
+  .qa th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-align: center;
+	background-color: #4260c3;
+	color: white;
+  }
+
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box; 
+	margin-top: 6px; 
+	margin-bottom: 16px;
+	resize: vertical 
+  }
+  
+
   input[type=button]{
 	background-color: rgb(128, 191, 249);
 	color: white;
@@ -128,12 +161,11 @@ input[type=text], select, textarea {
 	cursor: pointer;
   }
   
-  /* When moving the mouse over the submit button, add a darker green color */
+
   input[type=button]:hover{
 	background-color: rgb(95, 173, 245);
   }
   
-  /* Add a background color and some padding around the form */
   .container {
 	border-radius: 5px;
 	background-color: #f2f2f2;
